@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>James Rensch - Fatigue Kills</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo:700i" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            @keyframes blink {
+                0%   {height: 0px;}
+                16.7%   {height: 50vh}
+                18%   {height: 50vh}
+                23%   {height: 0px}
+                29%   {height: 0px}
+                46%   {height: 50vh;} 
+                54%   {height: 50vh;}
+                58%   {height: 0px;}
+
+            }
+
+            @keyframes bottomBlink {
+                0%   {height: 0px;top: 100vh}
+                16.7%   {height: 50vh; top: 50vh;}
+                18%   {height: 50vh;top: 50vh;}
+                23%   {height: 0px; top: 100vh}
+                29%   {height: 0px; top: 100vh;}
+                46%   {height: 50vh;top: 50vh;}
+                54%   {height: 50vh;top: 50vh;}
+                58%   {height: 0px; top: 100vh}
+            }
+
+            @keyframes change {
+                0% {visibility: visible; opacity: 1;}              
+                7% {visibility: visible; opacity: 1;}
+                8%  {opacity: 0;}
+                100% {opacity: 0; visibility: hidden}
+
+                
+            }
+
+            @keyframes changeInfo {
+                0%   {opacity: 0}          
+                2%   {opacity: 0.6}              
+                7% {opacity: 0.6}
+                8%  {opacity: 0;}
+
+                
+            }
+
+            body {
+                background-color: black;
+                color: white;
+                border: 0px;
+                padding: 0px;
+                margin: 0px;
+                font-family: 'Open Sans', sans-serif;
+            }
+            #innerTitleCont{
+                width: 80vw;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: calc(50vh - 150px);
+            }
+
+            #titleCont {
+                position: absolute;
+                top: -50px;
+                width: 100vw;
+                z-index: 5;
+                color: #f77300;
+                
+            }
+
+            #initialCoverImage {
+                position: absolute;
+                z-index: 0;
+                width: 100vw;
+                height: 100vh;
+                background-image: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,3,1) 91%);
+            }
+            #innerTitleCont h1 {
+                
+                font-size: 90px;
+    font-family: 'Arvo', serif;
+    letter-spacing: 10px;
+    line-height: 1.2;
+    margin-bottom: 0px;
+                
+                    
+            }
+
+            #innerTitleCont h3 {
+                margin-top: 0px;
+    font-size: 120px;
+    font-family: 'Black Han Sans', 'Open Sans', sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 0px;
+
+    }
+
+    #innerTitleCont h2 {
+                margin-top: 0px;
+    font-size: 26px;
+    font-family: 'Arvo', serif;
+    letter-spacing: 2px;
+
+    }
+
+        
+            #im1 {
+                visibility: hidden; 
+                animation: change 110s infinite;   
+                animation-delay: 16s;  
+            }
+
+            #informationDiv1 {
+                
+                position: absolute;
+                width: 280px;
+                right: 0px;
+                height: 240px;
+                top: 10vh;
+                z-index: 0;
+                background-color: #f77300;
+                opacity: 0;border-bottom-left-radius: 50px;
+                border-top-left-radius: 50px;
+                animation: changeInfo 110s infinite;   
+                animation-delay: 16s;
+                color: black;
+            }
+
+            .infoText {
+                margin-top: 40px;
+                font-size: 24px;
+                padding-left: 50px;
+                padding-right: 55px;
+                
+            }
+
+            #im2 {
+                visibility: hidden;
+                animation: change 110s infinite;   
+                animation-delay: 38s; 
+            }
+
+            #informationDiv2 {
+                
+                position: absolute;
+                width: 280px;
+                right: 0px;
+                height: 390px;
+                top: 10vh;
+                z-index: 0;
+                background-color: #f77300;
+                opacity: 0;
+                border-bottom-left-radius: 50px;
+                border-top-left-radius: 50px;
+                animation: changeInfo 110s infinite;   
+                animation-delay: 38s;
+                color: black;
+            }
+
+            #im3 {
+                visibility: hidden;
+                animation: change 110s infinite;   
+                animation-delay: 60s;
+            }
+
+            #informationDiv3 {
+                
+                position: absolute;
+                width: 280px;
+                right: 0px;
+                height: 310px;
+                top: 10vh;
+                z-index: 0;
+                background-color: #f77300;
+                opacity: 0;
+                border-bottom-left-radius: 50px;
+                border-top-left-radius: 50px;
+                animation: changeInfo 110s infinite;   
+                animation-delay: 60s;
+                color: black;
+            }
+
+            #im4 {
+                visibility: hidden;
+                animation: change 110s infinite;   
+                animation-delay: 82s;
+            }
+
+            #informationDiv4 {
+                
+                position: absolute;
+                width: 280px;
+                right: 0px;
+                height: 330px;
+                top: 10vh;
+                z-index: 0;
+                background-color: #f77300;
+                opacity: 0;
+                border-bottom-left-radius: 50px;
+                border-top-left-radius: 50px;
+                animation: changeInfo 110s infinite;   
+                animation-delay: 82s;
+                color: black;
+            }
+
+            #im5 {
+                visibility: hidden;
+                animation: change 110s infinite;   
+                animation-delay: 104s;
+            }
+            #infoText5 {
+                margin-top: 40px;
+                font-size: 20px;
+                padding-left: 50px;
+                padding-right: 55px;
+            }
+
+            #informationDiv5 {
+                
+                position: absolute;
+                width: 280px;
+                right: 0px;
+                height: 400px;
+                top: 5vh;
+                z-index: 0;
+                background-color: #f77300;
+                opacity: 0;
+                border-bottom-left-radius: 50px;
+                border-top-left-radius: 50px;
+                animation: changeInfo 110s infinite;   
+                animation-delay: 104s;
+                color: black;
+            }
+
+        
+
+            #coverImage {
+                background-color: black;
+                width: 100vw;
+                height: 0vh;
+                position: absolute;
+                animation: blink 22s infinite;
+                animation-delay: 5s;
+            }
+            #bottomCoverImage {
+                background-color: black;
+                top: 100vh;
+                width: 100vw;
+                height: 0vh;
+                position: absolute;
+                animation: bottomBlink 22s infinite;
+                animation-delay: 5s;
+            }
+
+            img {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                position: absolute;
+                
+            }
+
+            
+            #downButton {
+                position: absolute;
+                right: 30px;
+                top: calc(89vh - 10px);
+                font-size: 40px;
+                font-weight: bold;
+                color: white;
+                background-color: #f77300;
+                font-size: 20px;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            #downButton:hover {
+                color: black;
+            }
+            #div1inner {
+                width: calc(50vw - 50px);
+            }
+
+            
+
+            #fillerdiv {
+                height: 0;
+            }
+            #div1 {
+                position: relative;
+                padding-top: 1px;
+                background-color: #2e2e2e;
+                top: 100vh;
+                width: calc(100vw - 100px);
+                padding-left: 50px;
+                padding-right: 50px;
+                font-size: 18px; 
+                z-index: 0;
+            }
+            
+            #div1 h1 {
+                font-size: 35px;
+                text-align: center;
+            }
+            #div1 h3 {
+                font-size: 24px;   
+            }
+            #div1 p {
+                font-size: 18px;   
+            }
+            ul {
+                list-style-type: square;
+            }
+
+            #im6 {
+                position: relative;
+                left: 50vw;
+                width: 40vw;
+                top: -67vh;
+                height: 70vh;
+            }
+
+            #im7 {
+                position: relative;
+                left: 50vw;
+                width: 40vw;
+                height: 40vh;
+                top: -10vh;
+            }
+
+            #div2 {
+                padding-top: 20px;
+                position: relative;
+                background-color: #d46300;
+                color: black;
+                color: white;
+                width: 100vw;
+                margin-top: 250px; 
+                font-size: 18px;  
+                z-index: 1;
+            }
+            #div2inner {
+                padding-left: 50px;
+            }
+
+            #div2 h1 {
+                font-size: 35px;
+                text-align: center;
+            }
+            #div3 {
+                position: relative;
+                padding: 20px 50px 30px 50px;
+                background-color: #2e2e2e;
+                font-size: 18px; 
+
+            }
+            
+            #div3 h1 {
+                font-size: 35px;
+                text-align: center;
+            }
+            #square1 {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                background-color: #d46300;
+                z-index: 5;
+                transform: rotate(45deg);
+                top: 275px;
+                left: calc(50vw - 25px);
+                
+            }
+            #div4{
+                position: relative;
+                padding: 20px 50px 30px 50px;
+                background-color: #d46300;
+                font-size: 18px; 
+                padding-bottom: 50px;
+                
+            }
+            #div4 a{
+                color: white;
+                text-align: center;
+            }
+            #div4 h1{
+                text-align: center;
+            }
+            #square2 {
+                width: 50px;
+                height: 50px;
+                top: -25px;
+                position: absolute;
+                background-color: #2e2e2e;
+                z-index: 5;
+                transform: rotate(45deg);
+                left: calc(50vw - 25px);     
+            }
+
+            @media (max-width:975px) {
+                .informationDiv {
+                    visibility: hidden; 
+                }
+                #im6 {
+                    visibility: hidden;
+                }
+                #div1inner {
+                    width: calc(80vw);
+                }
+                #im7 {
+                    visibility: hidden;
+                }
+            }
+
+
+
+        </style>
+
+
+    </head>
+
+    <body>
+        <div id="titleCont">
+
+            <div id="innerTitleCont">
+            
+                <h1>Fatigue</h1>   
+
+                <h3> Kills </h3> 
+
+                <h2>Lack of SNOOZE <br/> is like drugs and BOOZE</h2>
+            </div>   
+        </div>
+        
+        <img src="Images/startingImage.jpg" id="startingImage" alt="drivingImage"/>
+
+        <img src="Images/Image1.jpg" id="im1" alt="carCrash1"/>
+
+        <img src="Images/Image2.jpg" id="im2" alt="carCrash2"/>
+
+        <img src="Images/Image3.jpg" id="im3" alt="carCrash3"/>
+
+        <img src="Images/Image4.jpeg" id="im4" alt="carCrash4"/>
+
+        <img src="Images/Image5.jpg" id="im5" alt="carCrash5"/>
+
+        <div id="initialCoverImage"></div>
+
+        <div id="informationDiv1">
+
+            <div class="infoText">Sleepiness contributes to approximately 1 in 5 fatal road accidents.</div>
+
+        </div>
+        <div id="informationDiv2">
+
+            <div class="infoText">If a driver falls asleep for just four seconds while travelling at 100 km/h, the car will have travelled 111 metres without a driver in control.</div>
+
+        </div>
+
+        <div id="informationDiv3">
+
+            <div class="infoText">Around 30% of severe single vehicle crashes in rural areas involve the driver being fatigued.</div>
+        </div>
+
+
+        <div id="informationDiv4">
+
+            <div class="infoText">In Victoria each year, fatigue results in about 50 deaths and approximately 300 serious injuries.</div>
+        </div>
+
+        <div id="informationDiv5">
+
+            <div id="infoText5">Drivers who have been awake for 24 hours will have a driving performance similar to a person who has a Blood Alcohol Concentration of 0.1 g/100ml. Those drivers are seven times more likely to have an accident.</div>
+        </div>
+
+
+        <div id="bottomCoverImage"></div>
+        <div id="coverImage"></div>
+
+        <div id="downButton">Learn more</div>
+
+        <div id="fillerdiv"></div>
+        
+        <div id="div1">
+            <h1>Signs of Fatigue</h1>
+            <div id="div1inner">
+            <h3>Early warning signs include:</h3>
+
+            <ul>
+                <li>Having wandering thoughts</li>
+                <li>Missing a gear</li>
+                <li>Slowing down unintentionally</li>
+                <li>Braking too late</li>
+            </ul>
+
+            <h3>Danger signs include:</h3>
+
+            <ul>
+                <li>Yawning</li>
+                <li>Blinking more than usual</li>
+                <li>Having trouble keeping your head up</li>
+                <li>Eyes closing for a moment</li>
+                <li>Eyes going out of focus</li>
+                <li>Forgetting about driving in the previous few minutes</li>
+            </ul>
+
+            <p>If you experience a danger sign, then you should pull off the road immediately; take a short rest; and/or let another person drive.</p>
+        </div>
+        <img src="Images/Image6.jpg" id="im6" alt="tiredPerson1">
+        </div>
+        <div id="square1"></div>
+        <div id="div2">
+            <h1>Causes of Fatigue include:</h1>
+
+            <div id="div2inner">
+            <ul>
+                <li>Not having had enough sleep</li>
+                <li>Driving when you would normally be asleep</li>
+                <li>Sleeping disorders</li>
+            </ul>
+            </div>
+            <img src="Images/Image7.jpg" id="im7" alt="tiredPerson2">
+        </div>
+        
+        <div id="div3">
+            <div id="square2"></div>
+            <h1>How to avoid Fatigue</h1>
+
+            <ul>
+                <li>Get a good night's sleep - don't stay up all night</li>
+                <li>Take regular breaks</li>
+                <li>Avoid travelling more than 8 hours in a day</li>
+                <li>Share the drive</li>
+                <li>Don't drive when you would usually be sleeping</li>
+            </ul>
+        
+            <p>You can also pull your vehicle to a safe parking place and take a short nap, if you start to feel tired.</p>
+        </div>
+
+        <div id="div4">
+            <h1>References</h1>
+            <h3>Sources</h3>
+            <ul>
+                <li><a href="https://www.rsc.wa.gov.au/Your-Safety/Behaviours/Fatigue">https://www.rsc.wa.gov.au/Your-Safety/Behaviours/Fatigue</a></li>
+                <li><a href="https://roadsafety.transport.nsw.gov.au/stayingsafe/fatigue/index.html">https://roadsafety.transport.nsw.gov.au/stayingsafe/fatigue/index.html</a></li>
+                <li><a href="https://mylicence.sa.gov.au/road-rules/the-drivers-handbook/fatigue">https://mylicence.sa.gov.au/road-rules/the-drivers-handbook/fatigue</a></li>
+            </ul>
+            <h3>Images</h3>
+            <ul>
+                <li><a href="subscribe/news/1/?sourceCode=TMWEB_WRE170_a_GGL&dest=https%3A%2F%2Fwww.themercury.com.au%2Ftruecrimeaustralia%2Fpolice-courts%2Fmultiple-car-crash-on-arthur-hwy-at-forcett%2Fnews-story%2Fbfbba79107a7b29cae1250cec21eb52e&memtype=anonymous&mode=premium&offerset=tm_truecrime_premium&nk=19bda279e886264947dc6ff2cddb9291-1597278288">https://www.themercury.com.au/</a></li>
+
+                <li><a href="https://www.nbnnews.com.au/2020/03/21/man-dies-three-injured-in-central-coast-crash-2-2/">https://www.nbnnews.com.au/2020/03/21/man-dies-three-injured-in-central-coast-crash-2-2/</a></li>
+                <li><a href="https://www.nbnnews.com.au/2020/03/21/man-dies-three-injured-in-central-coast-crash-2-2/">https://www.perthnow.com.au/news/court-justice/50-year-old-man-charged-with-manslaughter-over-cooloongup-crash-that-killed-two-young-women-ng-b881564003z</a></li>
+                <li><a href="https://www.shutterstock.com/video/clip-4903592-car-crash-inside-vehicle-pov">https://www.shutterstock.com/video/clip-4903592-car-crash-inside-vehicle-pov</a></li>
+                <li><a href="https://www.roadandtrack.com/car-culture/a4916/features-web-originals-anatomy-of-a-high-speed-car-crash/">https://www.roadandtrack.com/car-culture/a4916/features-web-originals-anatomy-of-a-high-speed-car-crash/</a></li>
+            </ul>
+        </div>
+
+        <script>
+            $("#downButton").click(function() {
+                console.log("ran")
+        $('html,body').animate({
+            scrollTop: $("#div1").offset().top},
+            'slow');
+    });
+        </script>
+
+    </body>
+
+
+</html>
